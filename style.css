@@ -48,10 +48,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 300px; 
+    gap: 150px; 
     background: #2daed2;
-    padding: 40px 10px;
+    padding: 15px 10px;
     text-align: center;
 }
 
@@ -59,7 +58,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
     color: black;
     font-weight: bold;
     text-align: center;
@@ -69,11 +67,15 @@ body {
     border: 2px solid #000;
 }
 
+.mod>img{
+    max-width: 280px;
+}
+
 .centered {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
     text-align: center;
-    font-size: 20px;
+    font-size: 10px;
     font-family: 'mojangles', cursive;
 }
 
@@ -102,7 +104,7 @@ footer {
 }
 
 .mods-text{
-    font-size: 20px;
+    font-size: 13px;
 }
 
 .footer-fixed {
@@ -110,19 +112,13 @@ footer {
     right: 10px;
     bottom: 10px;
     font-family: 'mojangles', cursive;
-    font-size: 22px;
+    font-size: 17px;
     color: white;
     background-color: rgba(0, 0, 0, 0.4);
     padding: 6px 12px;
     border-radius: 6px;
 }
 
-.icon {
-    width: 50px;
-    height: 50px;
-    vertical-align: middle;
-    margin-right: 6px;
-}
 
 .link-block {
     margin: 15px 0;
@@ -130,15 +126,19 @@ footer {
 }
 
 .icon {
-    width: 50px;
-    height: 50px;
+    width: 27px;
+    height: 27px;
     vertical-align: middle;
     margin-right: 8px;
 }
 
 .channel-icon {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     vertical-align: middle;
     margin-right: 8px;
+}
+
+.links-texts{
+    font-size: 15px;
 }
