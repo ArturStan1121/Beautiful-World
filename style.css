@@ -1,14 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Gajraj+One&family=Risque&display=swap');
+/*@font-face {
+    font-family: mojangles;
+    src: url(fonts/minecraft.ttf);
+}
+
+@font-face {
+    font-family: BoldRus;
+    src: url(fonts/ofont.ru_Russia.ttf);
+}
 
 body{
-    background-image: url(images/2.png);
+    background-image: url(images/Pesic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'BoldRus';
+}
+
+a{
+    font-family: 'BoldRus';
 }
 
 header{
     text-align: center;
-    font-family: 'Climate Crisis', cursive;
 }
 
 .Lol{
@@ -18,7 +30,7 @@ header{
 main{
     padding: 10px;
     text-align: center;
-    font-family: 'Gajraj One', cursive;
+    font-family: 'mojangles', cursive;
     font-size: 30px;
 }
 
@@ -26,9 +38,161 @@ main>p{
     padding: 20px;
 }
 
+a{
+    color: black;
+}
+
 footer{
-    font-family: 'Risque', cursive;
+    font-family: 'mojangles', cursive;
     font-size: 30px;
     text-align: right;
+    align-items:baseline;
     color:white;
+}
+
+.menu{
+    max-width: 25%
+}*/
+@font-face {
+    font-family: mojangles;
+    src: url(fonts/minecraft.ttf);
+}
+
+@font-face {
+    font-family: BoldRus;
+    src: url(fonts/ofont.ru_Russia.ttf);
+}
+
+body {
+    background-image: url(images/Pesic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    font-family: 'BoldRus', sans-serif;
+    color: white;
+}
+
+.top-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+
+.logo {
+    justify-self: start;
+    align-self: start;
+}
+
+.logo img {
+    height: 40px;
+    display: block;
+}
+.top-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: auto;
+}
+
+.mods {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 300px; 
+    background: #2daed2;
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.mod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.menu-image {
+    max-width: 390px;
+    border: 2px solid #000;
+}
+
+.centered {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'mojangles', cursive;
+}
+
+.centered a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+footer {
+    font-family: 'mojangles', cursive;
+    font-size: 20px;
+    text-align: right;
+    padding: 20px;
+}
+
+
+
+.center-text {
+    font-weight: bold;
+    font-size: 20px;
+    justify-self: center;
+}
+
+.right {
+    justify-self: end;
+}
+
+.mods-text{
+    font-size: 20px;
+}
+
+.footer-fixed {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    font-family: 'mojangles', cursive;
+    font-size: 22px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+.link-block {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.channel-icon {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
