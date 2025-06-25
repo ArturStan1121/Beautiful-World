@@ -52,7 +52,7 @@ body {
     background: #2daed2;
     padding: 15px 10px;
     text-align: center;
-    flex-wrap: wrap; /* Для адаптивности даже на больших экранах */
+    flex-wrap: wrap;
 }
 
 .mod {
@@ -62,12 +62,19 @@ body {
     color: white;
     font-weight: bold;
     text-align: center;
+    max-width: 300px;
+    width: 100%;
 }
 
-.mod > img {
-    max-width: 100%;
-    height: auto;
+.mod img {
     width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+}
+
+.menu-image {
+    border: 2px solid #000;
 }
 
 .centered {
@@ -101,7 +108,10 @@ footer {
 }
 
 .mods-text {
-    font-size: 13px;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: center;
+    color: white;
 }
 
 .footer-fixed {
@@ -172,22 +182,21 @@ footer {
         align-items: center;
     }
 
-    .mod img,
-    .menu-image {
+    .mod {
+        max-width: 90%;
+    }
+
+    .mod img {
         max-width: 90%;
         width: 100%;
         height: auto;
     }
 
-    .mod {
-        color: white;
+    .mods-text {
+        font-size: 18px;
+        padding: 8px 12px;
     }
 
-    .mods-text {
-        font-size: 16px;
-        padding: 0 10px;
-        text-align: center;
-    }
     .centered {
         padding: 10px;
         font-size: 12px;
@@ -228,28 +237,24 @@ footer {
     }
 
     .mods {
-        display: flex;
-        flex-direction: column;
         gap: 20px;
         padding: 10px 5px;
         align-items: center;
     }
 
-    .mod img,
-    .menu-image {
-        max-width: 90%;
+    .mod {
+        max-width: 95%;
+    }
+
+    .mod img {
+        max-width: 95%;
         width: 100%;
         height: auto;
     }
 
-    .mod {
-        color: white;
-    }
-
     .mods-text {
-        font-size: 16px;
-        padding: 0 10px;
-        text-align: center;
+        font-size: 20px;
+        padding: 10px 15px;
     }
 
     .centered h2 {
