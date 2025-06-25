@@ -142,3 +142,89 @@ footer {
 .links-texts{
     font-size: 15px;
 }
+
+@media screen and (max-width: 768px) {
+
+    body {
+        background-size: cover;
+        font-size: 14px;
+    }
+
+    .top-bar {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 10px 5px;
+    }
+
+    .top-bar .logo,
+    .top-bar .center-text,
+    .top-bar .right {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .center-text {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    .right {
+        font-size: 14px;
+    }
+
+    .mods {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 5px;
+    }
+
+    .mod img {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .menu-image {
+        max-width: 90%;
+        height: auto;
+    }
+
+    .mods-text {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .centered {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .link-block {
+        font-size: 14px;
+    }
+
+    .icon, .channel-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    footer.footer-fixed {
+        position: static;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px;
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .center-text {
+        font-size: 14px;
+    }
+    .link-block {
+        font-size: 12px;
+    }
+    .mods-text {
+        font-size: 10px;
+    }
+}
