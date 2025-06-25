@@ -59,10 +59,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: black;
+    color: white;
     font-weight: bold;
     text-align: center;
+}
+
+.mod > img {
     max-width: 100%;
+    height: auto;
+    width: 100%;
 }
 
 .menu-image {
@@ -70,12 +75,6 @@ body {
     width: 100%;
     height: auto;
     border: 2px solid #000;
-}
-
-.mod > img {
-    max-width: 280px;
-    width: 100%;
-    height: auto;
 }
 
 .centered {
@@ -173,17 +172,22 @@ footer {
     }
 
     .mods {
+        display: flex;
         flex-direction: column;
         gap: 20px;
         padding: 10px 5px;
         align-items: center;
     }
 
-    .mod > img,
+    .mod img,
     .menu-image {
         max-width: 90%;
         width: 100%;
         height: auto;
+    }
+
+    .mod {
+        color: white;
     }
 
     .mods-text {
@@ -191,7 +195,6 @@ footer {
         padding: 0 10px;
         text-align: center;
     }
-
     .centered {
         padding: 10px;
         font-size: 12px;
@@ -231,9 +234,29 @@ footer {
         font-size: 12px;
     }
 
+    .mods {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px 5px;
+        align-items: center;
+    }
+
+    .mod img,
+    .menu-image {
+        max-width: 90%;
+        width: 100%;
+        height: auto;
+    }
+
+    .mod {
+        color: white;
+    }
+
     .mods-text {
-        font-size: 10px;
-        padding: 0 5px;
+        font-size: 12px;
+        padding: 0 10px;
+        text-align: center;
     }
 
     .centered h2 {
