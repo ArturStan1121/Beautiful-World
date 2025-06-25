@@ -9,6 +9,7 @@
 }
 
 body {
+    padding-top: 50px;
     background-image: url(images/Pesic.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,11 +22,15 @@ body {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     background-color: #1f1f1f;
     color: white;
-    position: relative;
+    position: fixed;
     text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .logo {
@@ -149,13 +154,78 @@ footer {
     font-size: 15px;
 }
 
+.nav-links {
+    display: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 14px;
+    margin-left: 10px;
+    background-color: #2daed2;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #1c8bb8;
+}
+
+.right-link {
+    justify-self: end;
+    text-align: right;
+}
+
+.right-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.right-link a:hover {
+    text-decoration: underline;
+}
+
 /* Адаптивность для планшетов и телефонов */
 @media screen and (max-width: 768px) {
+    body{
+        padding-top: 130px;
+    }
 
     .top-bar {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: flex-start;
+        position: fixed;
+    }
+
+    .right-link {
+        display: none; /* Скрываем "Контакты" справа на телефонах */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        width: 100%;
         text-align: center;
-        padding: 10px 5px;
+        margin-bottom: 5px;
+        color: white;
+        background-color: #2daed2;
+        border-radius: 4px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .nav-links a:hover {
+        background-color: #1c8bb8;
     }
 
     .top-bar .logo,
@@ -219,6 +289,29 @@ footer {
         padding: 10px;
         background-color: rgba(0,0,0,0.5);
     }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 14px;
+        margin-bottom: 6px;
+        background-color: #2daed2;
+        border-radius: 4px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .nav-links a:hover {
+        background-color: #1c8bb8;
+    }
 }
 
 /* Адаптивность для маленьких смартфонов */
@@ -234,6 +327,10 @@ footer {
 
     .right {
         font-size: 12px;
+    }
+
+    .top-bar{
+        position: fixed;
     }
 
     .mods {
@@ -275,4 +372,31 @@ footer {
         font-size: 12px;
         padding: 8px;
     }
+
+    .right-link {
+        display: none; /* Скрываем "Контакты" справа на телефонах */
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+        color: white;
+        background-color: #2daed2;
+        border-radius: 4px;
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+    .nav-links a:hover {
+        background-color: #1c8bb8;
+    }
 }
+
