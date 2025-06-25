@@ -70,13 +70,6 @@ body {
     width: 100%;
 }
 
-.menu-image {
-    max-width: 390px;
-    width: 100%;
-    height: auto;
-    border: 2px solid #000;
-}
-
 .centered {
     background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
