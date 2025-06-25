@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: mojangles;
     src: url(fonts/minecraft.ttf);
@@ -38,6 +37,7 @@ body {
     height: 40px;
     display: block;
 }
+
 .top-title {
     font-weight: bold;
     font-size: 18px;
@@ -48,10 +48,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 150px; 
+    gap: 150px;
     background: #2daed2;
     padding: 15px 10px;
     text-align: center;
+    flex-wrap: wrap; /* Для адаптивности даже на больших экранах */
 }
 
 .mod {
@@ -61,14 +62,20 @@ body {
     color: black;
     font-weight: bold;
     text-align: center;
+    max-width: 100%;
 }
+
 .menu-image {
     max-width: 390px;
+    width: 100%;
+    height: auto;
     border: 2px solid #000;
 }
 
-.mod>img{
+.mod > img {
     max-width: 280px;
+    width: 100%;
+    height: auto;
 }
 
 .centered {
@@ -91,8 +98,6 @@ footer {
     padding: 20px;
 }
 
-
-
 .center-text {
     font-weight: bold;
     font-size: 20px;
@@ -103,7 +108,7 @@ footer {
     justify-self: end;
 }
 
-.mods-text{
+.mods-text {
     font-size: 13px;
 }
 
@@ -118,7 +123,6 @@ footer {
     padding: 6px 12px;
     border-radius: 6px;
 }
-
 
 .link-block {
     margin: 15px 0;
@@ -139,16 +143,12 @@ footer {
     margin-right: 8px;
 }
 
-.links-texts{
+.links-texts {
     font-size: 15px;
 }
 
+/* Адаптивность для планшетов и телефонов */
 @media screen and (max-width: 768px) {
-
-    body {
-        background-size: cover;
-        font-size: 14px;
-    }
 
     .top-bar {
         grid-template-columns: 1fr;
@@ -176,21 +176,20 @@ footer {
         flex-direction: column;
         gap: 20px;
         padding: 10px 5px;
-        display: flex; /* Важно! Иначе flex-direction не подействует */
         align-items: center;
     }
 
-    /* Сделать адаптивными все картинки внутри .mod */
     .mod > img,
     .menu-image {
         max-width: 90%;
-        height: auto;
         width: 100%;
+        height: auto;
     }
 
     .mods-text {
         font-size: 12px;
         padding: 0 10px;
+        text-align: center;
     }
 
     .centered {
@@ -217,7 +216,7 @@ footer {
     }
 }
 
-
+/* Адаптивность для маленьких смартфонов */
 @media screen and (max-width: 480px) {
 
     body {
