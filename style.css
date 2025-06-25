@@ -176,16 +176,16 @@ footer {
         flex-direction: column;
         gap: 20px;
         padding: 10px 5px;
+        display: flex; /* Важно! Иначе flex-direction не подействует */
+        align-items: center;
     }
 
-    .mod img {
-        max-width: 90%;
-        height: auto;
-    }
-
+    /* Сделать адаптивными все картинки внутри .mod */
+    .mod img,
     .menu-image {
         max-width: 90%;
         height: auto;
+        width: 100%;
     }
 
     .mods-text {
@@ -217,14 +217,42 @@ footer {
     }
 }
 
+
 @media screen and (max-width: 480px) {
+
+    body {
+        font-size: 12px;
+    }
+
     .center-text {
         font-size: 14px;
     }
+
+    .right {
+        font-size: 12px;
+    }
+
+    .mods-text {
+        font-size: 10px;
+        padding: 0 5px;
+    }
+
+    .centered h2 {
+        font-size: 16px;
+    }
+
     .link-block {
         font-size: 12px;
     }
-    .mods-text {
-        font-size: 10px;
+
+    .icon, .channel-icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+    }
+
+    footer.footer-fixed {
+        font-size: 12px;
+        padding: 8px;
     }
 }
