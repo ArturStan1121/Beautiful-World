@@ -181,7 +181,7 @@ footer {
     }
 
     /* Сделать адаптивными все картинки внутри .mod */
-    .mod img,
+    .mod > img,
     .menu-image {
         max-width: 90%;
         height: auto;
