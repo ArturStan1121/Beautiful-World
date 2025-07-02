@@ -176,6 +176,7 @@ footer {
 .right-link {
     justify-self: end;
     text-align: right;
+    margin-right: 30px; /* Сдвиг кнопки Контакты левее на ПК */
 }
 
 .right-link a {
@@ -184,64 +185,77 @@ footer {
     font-size: 16px;
     font-weight: bold;
     padding: 5px 10px;
+    background-color: #2daed2;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .right-link a:hover {
     text-decoration: underline;
+    background-color: #1c8bb8;
 }
 
 /* Адаптивность для планшетов и телефонов */
 @media screen and (max-width: 768px) {
-    body{
-        padding-top: 130px;
+    body {
+        padding-top: 171px;
+        overflow-x: hidden; /* Чтобы вообще сайт не мог уходить вправо */
     }
 
     .top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        position: fixed;
-    }
-
-    .right-link {
-        display: none; /* Скрываем "Контакты" справа на телефонах */
-    }
-
-    .nav-links {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
+        align-items: center;
+        text-align: center;
     }
 
-    .nav-links a {
+    .logo {
+        display: flex;
+        justify-content: center;
         width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+        max-width: 80px;
+        height: auto;
+    }
+
+    .nav-links,
+    .right-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .nav-links a,
+    .right-link a {
         text-align: center;
-        margin-bottom: 5px;
         color: white;
         background-color: #2daed2;
         border-radius: 4px;
         padding: 8px 14px;
         font-size: 14px;
+        min-width: 80px;
+        max-width: 150px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        flex-grow: 0; /* Запрещаем тянуться */
+        flex-shrink: 1;
     }
 
-    .nav-links a:hover {
+    .nav-links a:hover,
+    .right-link a:hover {
         background-color: #1c8bb8;
-    }
-
-    .top-bar .logo,
-    .top-bar .center-text,
-    .top-bar .right {
-        justify-self: center;
-        text-align: center;
-    }
-
-    .center-text {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-
-    .right {
-        font-size: 14px;
     }
 
     .mods {
@@ -250,16 +264,21 @@ footer {
         gap: 20px;
         padding: 10px 5px;
         align-items: center;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .mod {
-        max-width: 90%;
+        width: 100%;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
 
     .mod img {
-        max-width: 90%;
         width: 100%;
+        max-width: 100%;
         height: auto;
+        display: block;
     }
 
     .mods-text {
@@ -276,7 +295,8 @@ footer {
         font-size: 14px;
     }
 
-    .icon, .channel-icon {
+    .icon,
+    .channel-icon {
         width: 20px;
         height: 20px;
         margin-right: 5px;
@@ -289,34 +309,12 @@ footer {
         padding: 10px;
         background-color: rgba(0,0,0,0.5);
     }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-top: 10px;
-        width: 100%;
-    }
-
-    .nav-links a {
-        color: white;
-        text-decoration: none;
-        padding: 8px 14px;
-        margin-bottom: 6px;
-        background-color: #2daed2;
-        border-radius: 4px;
-        font-size: 14px;
-        text-align: center;
-    }
-
-    .nav-links a:hover {
-        background-color: #1c8bb8;
-    }
 }
+
+
 
 /* Адаптивность для маленьких смартфонов */
 @media screen and (max-width: 480px) {
-
     body {
         font-size: 12px;
     }
@@ -327,10 +325,6 @@ footer {
 
     .right {
         font-size: 12px;
-    }
-
-    .top-bar{
-        position: fixed;
     }
 
     .mods {
@@ -362,7 +356,8 @@ footer {
         font-size: 12px;
     }
 
-    .icon, .channel-icon {
+    .icon,
+    .channel-icon {
         width: 16px;
         height: 16px;
         margin-right: 4px;
@@ -372,31 +367,4 @@ footer {
         font-size: 12px;
         padding: 8px;
     }
-
-    .right-link {
-        display: none; /* Скрываем "Контакты" справа на телефонах */
-    }
-
-    .nav-links {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .nav-links a {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 5px;
-        color: white;
-        background-color: #2daed2;
-        border-radius: 4px;
-        padding: 8px 14px;
-        font-size: 14px;
-    }
-
-    .nav-links a:hover {
-        background-color: #1c8bb8;
-    }
 }
-
