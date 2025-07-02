@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Идеальный Мир</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
     <div class="top-bar">
@@ -17,14 +20,26 @@
         </div>
 
         <nav class="nav-links">
-            <a href="#mods">Моды</a>
-            <a href="#download">Скачать</a>
+            <a class="scroll" href="#mods">Моды</a>
+            <a class="scroll" href="#download">Скачать</a>
         </nav>
     </div>
 </div>
 
 
     <section class="mods" id="mods">
+        <div class="mod">
+            <img src="images/Chisel.png" alt="Chisel" class="menu-image">
+            <p class="mods-text">Chisel:<br> <a href="https://mods-of-minecraft.fandom.com/wiki/Chisel">Вики(тык)</a></p>
+        </div>
+        <div class="mod">
+            <img src="images/DraconicEvo.png" alt="DraconicEvo" class="menu-image">
+            <p class="mods-text">Draconic Evolution:<br> <a href="https://ru.minecraft.wiki/w/Draconic_Evolution">Вики(тык)</a></p>
+        </div>
+        <div class="mod">
+            <img src="images/Botania.png" alt="Botania">
+            <p class="mods-text">Botania и её Аддоны<br>Ссылки на вики: <a href="https://ru.minecraft.wiki/w/Botania">Botania</a></p>
+        </div>
         <div class="mod">
             <img  src="images/ProjectMMO.png" alt="Project MMO">
             <p class="mods-text">Project MMO Вики:<br><a href="https://a-hole-new-whirled.fandom.com/wiki/Project_MMO">Вики(тык)</a></p>
@@ -34,8 +49,12 @@
             <p class="mods-text">Меню Сборки</p>
         </div>
         <div class="mod">
-            <img src="images/Botania.png" alt="Botania">
-            <p class="mods-text">Botania и её Аддоны<br>Ссылки на вики: <a href="https://ru.minecraft.wiki/w/Botania">Botania</a></p>
+            <img src="images/CCTweaked.png" alt="CCTweaked" class="menu-image">
+            <p class="mods-text">CC:Tweaked  :<br> <a href="https://ru.minecraft.wiki/w/ComputerCraft">Вики(тык)</a></p>
+        </div>
+        <div class="mod">
+            <img src="images/Mekanism.png" alt="Mekanism" class="menu-image">
+            <p class="mods-text">Mekanism:<br> <a href="https://ru.minecraft.wiki/w/Mekanism">Вики(тык)</a></p>
         </div>
     </section>
 
@@ -90,12 +109,10 @@
         <a class="links-texts" href="https://tlauncher.org/en/">https://tlauncher.org/en/</a>
     </div>
 </div>
-
-
-
-
     <footer class="footer-fixed">
         <p>Copyright Mojang AB. Do Not Distribute</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
